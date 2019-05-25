@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		719E94F72298D42900BA9C8E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E94F62298D42900BA9C8E /* main.swift */; };
+		719E95092298D84300BA9C8E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E94F62298D42900BA9C8E /* main.swift */; };
+		719E950B2298D84C00BA9C8E /* NumberBaseballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719E95032298D74300BA9C8E /* NumberBaseballTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +27,20 @@
 /* Begin PBXFileReference section */
 		719E94F32298D42900BA9C8E /* NumberBaseballGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NumberBaseballGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		719E94F62298D42900BA9C8E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		719E95012298D74300BA9C8E /* NumberBaseballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberBaseballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		719E95032298D74300BA9C8E /* NumberBaseballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBaseballTests.swift; sourceTree = "<group>"; };
+		719E95052298D74300BA9C8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		719E94F02298D42800BA9C8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		719E94FE2298D74300BA9C8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				719E94F52298D42900BA9C8E /* NumberBaseballGame */,
+				719E95022298D74300BA9C8E /* NumberBaseballTests */,
 				719E94F42298D42900BA9C8E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				719E94F32298D42900BA9C8E /* NumberBaseballGame */,
+				719E95012298D74300BA9C8E /* NumberBaseballTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +74,15 @@
 				719E94F62298D42900BA9C8E /* main.swift */,
 			);
 			path = NumberBaseballGame;
+			sourceTree = "<group>";
+		};
+		719E95022298D74300BA9C8E /* NumberBaseballTests */ = {
+			isa = PBXGroup;
+			children = (
+				719E95032298D74300BA9C8E /* NumberBaseballTests.swift */,
+				719E95052298D74300BA9C8E /* Info.plist */,
+			);
+			path = NumberBaseballTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +105,23 @@
 			productReference = 719E94F32298D42900BA9C8E /* NumberBaseballGame */;
 			productType = "com.apple.product-type.tool";
 		};
+		719E95002298D74300BA9C8E /* NumberBaseballTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 719E95062298D74300BA9C8E /* Build configuration list for PBXNativeTarget "NumberBaseballTests" */;
+			buildPhases = (
+				719E94FD2298D74300BA9C8E /* Sources */,
+				719E94FE2298D74300BA9C8E /* Frameworks */,
+				719E94FF2298D74300BA9C8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberBaseballTests;
+			productName = NumberBaseballTests;
+			productReference = 719E95012298D74300BA9C8E /* NumberBaseballTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +133,9 @@
 				ORGANIZATIONNAME = jamie;
 				TargetAttributes = {
 					719E94F22298D42800BA9C8E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					719E95002298D74300BA9C8E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -110,9 +153,20 @@
 			projectRoot = "";
 			targets = (
 				719E94F22298D42800BA9C8E /* NumberBaseballGame */,
+				719E95002298D74300BA9C8E /* NumberBaseballTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		719E94FF2298D74300BA9C8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		719E94EF2298D42800BA9C8E /* Sources */ = {
@@ -120,6 +174,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				719E94F72298D42900BA9C8E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		719E94FD2298D74300BA9C8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719E950B2298D84C00BA9C8E /* NumberBaseballTests.swift in Sources */,
+				719E95092298D84300BA9C8E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +322,40 @@
 			};
 			name = Release;
 		};
+		719E95072298D74300BA9C8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NumberBaseballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.NumberBaseballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		719E95082298D74300BA9C8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NumberBaseballTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.NumberBaseballTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +373,15 @@
 			buildConfigurations = (
 				719E94FB2298D42900BA9C8E /* Debug */,
 				719E94FC2298D42900BA9C8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		719E95062298D74300BA9C8E /* Build configuration list for PBXNativeTarget "NumberBaseballTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				719E95072298D74300BA9C8E /* Debug */,
+				719E95082298D74300BA9C8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
