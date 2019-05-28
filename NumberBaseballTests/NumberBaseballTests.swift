@@ -58,6 +58,10 @@ public class Number {
     func isDuplicated(_ number: String) -> Bool {
         return Set(number).count != number.count
     }
+    
+    func checkInputNumberFormat(_ number: String) -> Bool {
+        return checkLength(number) && !checkContainsZero(number) && !isDuplicated(number)
+    }
 }
 
 class NumberBaseballTests: XCTestCase {
@@ -83,5 +87,13 @@ class NumberBaseballTests: XCTestCase {
     func testDuplicateNumber() {
         let numbers = Number()
         XCTAssertFalse(numbers.isDuplicated(numbers.generateNumber()))
+    }
+    
+    func testInputNumberFormat() {
+        // 사용자가 번호를 입력한다
+        // 번호가 올바르게 입력되었는 지 체크한다
+        let number = Number()
+        let userNumber = "274"
+        XCTAssertTrue(number.checkInputNumberFormat(userNumber))
     }
 }
