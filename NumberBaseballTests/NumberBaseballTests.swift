@@ -75,6 +75,23 @@ public class Number {
         }
         return count
     }
+    
+    func getStrikeCount(match matchNumber: String, user userNumber: String) -> Int {
+        let match = matchNumber.map { $0 }
+        let user = userNumber.map { $0 }
+        var count = 0
+        
+        if match[0] == user[1] || match[0] == user[2] {
+            count += 1
+        }
+        if match[1] == user[0] || match[1] == user[2] {
+            count += 1
+        }
+        if match[2] == user[0] || match[2] == user[1] {
+            count += 1
+        }
+        return count
+    }
 }
 
 class NumberBaseballTests: XCTestCase {
@@ -116,5 +133,17 @@ class NumberBaseballTests: XCTestCase {
         let matchNumber = "394"
         let userNumber = "274"
         XCTAssertEqual(Number().getBallCount(match: matchNumber, user: userNumber), 1)
+    }
+    
+    func testInputNumberStrikeCount() {
+        // 사용자가 번호를 입력한다
+        // 다른 위치에 같은 숫자가 있는 지 검사한다
+        let matchNumber = "394"
+        let userNumber = "274"
+        XCTAssertEqual(Number().getStrikeCount(match: matchNumber, user: userNumber), 0)
+        
+        let matchNumber2 = "495"
+        let userNumber2 = "573"
+        XCTAssertEqual(Number().getStrikeCount(match: matchNumber2, user: userNumber2), 1)
     }
 }
