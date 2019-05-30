@@ -63,7 +63,7 @@ public class Number {
         return checkLength(number) && !checkContainsZero(number) && !isDuplicated(number)
     }
     
-    func haveSameNumber(match matchNumber: String, user userNumber: String) -> Int {
+    func getBallCount(match matchNumber: String, user userNumber: String) -> Int {
         let match = matchNumber.map { $0 }
         let user = userNumber.map { $0 }
         var count = 0
@@ -110,11 +110,11 @@ class NumberBaseballTests: XCTestCase {
         XCTAssertTrue(number.checkInputNumberFormat(userNumber))
     }
     
-    func testInputNumberHaveSameNumber() {
+    func testInputNumberBallCount() {
         // 사용자가 번호를 입력한다
         // 같은 숫자가 있는 지 검사한다
         let matchNumber = "394"
         let userNumber = "274"
-        XCTAssertEqual(Number().haveSameNumber(match: matchNumber, user: userNumber), 1)
+        XCTAssertEqual(Number().getBallCount(match: matchNumber, user: userNumber), 1)
     }
 }
